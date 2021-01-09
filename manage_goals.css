@@ -2,3 +2,7 @@ body {
     background-color: rgb(58, 194, 112);
     text-align: center;
 }
+h1 {
+    text-align: center;
+    font-family: 'Segoe Script', 'Segoe Print';
+}
