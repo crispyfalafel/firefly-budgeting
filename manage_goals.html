@@ -5,23 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="manage_goals.css">
+    <script src="manage_goals.js"></script>
 </head>
 <body>
+  <img src="FireflyLogo.png"
+  style=
+  width:10%
+  >
     <h1>Manage Goals</h1>
     <p>You've saved blah dollars! How much of your savings would you like to put in each goal?</p>
-    <h2>Goal 1</h2>
+    <Form>
+    <h2>Goal 1 <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    </div></h2>
     $<input type="number" min="0" placeholder="0.00"  step=".01" id="money_one">
+    
     <h2>Goal 2</h2>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+    </div>
     $<input type="number" min="0" placeholder="0.00"  step=".01" id="money_two">
     <br>
     <br>
     <Button>Submit</Button>
+  </Form>
     <div class="popup" onclick="myFunction()">
         <span class="popuptext" id="myPopup">Uh Oh! You don't have that amount of money saved yet. Try lowering the amount allocated to one of your goals.</span>
       </div>
-    <Button>Reset</Button>
+    <Button onclick="myFunction()"> Reset</Button>
     <div class="popup" onclick="myFunction()">
-        <span class="popuptext" id="myPopup">Are you sure you want to remove all the progress and reset your goal?</span>
+        <span class="popuptext" id="myPopup2">Are you sure you want to remove all the progress and reset your goal?</span>
       </div>
+     
+      
+
 </body>
+
+
 </html>
