@@ -10,28 +10,38 @@
         }
         
     </style>
-
+    <link rel="stylesheet" href="Landing.css">
 </head>
 
 <img src="logo.jpg">
-<div>
-    <h1>Title of company</h1>
-</div>
+
 
 <body>
+    <div>
+        <h1>Firefly Budgeting</h1>
+    </div>
     <div id=beforeLogin>
-        <p>Welcome to title of company</p>
+        <p>Welcome to Firefly Budgeting, an easy-to-use budgeting tool that helps you save up for your goals!</p>
     </div>
     <div id=afterLogin>
-        <form>
+        <form action="/" method="POST">
             <label for="money_earned">Money Earned</label>
-            <input type="number" min="0" step=".01" id="money_earned">
+            $<input type="number" min="0" placeholder="0.00"  step=".01" id="money_earned">
             <label for="money_spent">Money Spent</label>
-            <input type="number" min="0" step=".01" id="money_spent">
-            <label for="add_goal">Add Goal</label>
-            <input type="number" min="0" step=".01" id="money_spent">
+            $<input type="number" min="0" placeholder="0.00"  step=".01" id="money_spent">
             <button>Submit</button>
         </form>
+        <form>
+            <p>Add Goal</p>
+            <label for="goal_name">Goal Name</label>
+            <input type="text" id="money_spent">
+            <label for="goal_cost">Goal Cost</label>
+            $<input type="number" min="0" placeholder="0.00" step=".01" id="goal_cost">
+            <button>Submit</button>
+        </form>
+
+            
+        
        
     </div>
     

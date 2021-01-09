@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="manage_goals.css">
+</head>
+<body>
+    <h1>Manage Goals</h1>
+    <p>You've saved blah dollars! How much of your savings would you like to put in each goal?</p>
+    <h2>Goal 1</h2>
+    $<input type="number" min="0" placeholder="0.00"  step=".01" id="money_one">
+    <h2>Goal 2</h2>
+    $<input type="number" min="0" placeholder="0.00"  step=".01" id="money_two">
+    <Button>Submit</Button>
+    <div class="popup" onclick="myFunction()">Submit
+        <span class="popuptext" id="myPopup">Uh Oh! You don't have that amount of money saved yet. Try lowering the amount allocated to one of your goals.</span>
+      </div>
+    <Button>Remove</Button>
+    <div class="popup" onclick="myFunction()">Remove
+        <span class="popuptext" id="myPopup">Are you sure you want to remove all the progress and reset your goal?</span>
+      </div>
+</body>
+</html>
