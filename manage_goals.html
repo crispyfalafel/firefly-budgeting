@@ -15,16 +15,20 @@
     <h1>Manage Goals</h1>
     <p>You've saved blah dollars! How much of your savings would you like to put in each goal?</p>
     <Form>
-    <h2>Goal 1 <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
-    </div></h2>
-    $<input type="number" min="0" placeholder="0.00"  step=".01" id="money_one">
     
-    <h2>Goal 2</h2>
-    <div class="slidecontainer">
-      <input type="range" min="1" max="100" value="50" class="slider" id="myRange2">
+     <div class="slidecontainer"><h2 id="goal1">Cell Phone</h2>
+      <input type="range" min="0" max="100" value="50"class="slider" id="myRange">
+      <span id="demo"></span>
     </div>
-    $<input type="number" min="0" placeholder="0.00"  step=".01" id="money_two">
+    
+   
+    
+    <div class="slidecontainer"><h2 id="goal2">Chocolate</h2>
+      <input type="range" min="0" max="100" value="50" class="slider" id="myRange2">
+      <span id="demo"></span>
+    </div>
+  
+    
     <br>
     <br>
     <Button>Submit</Button>
