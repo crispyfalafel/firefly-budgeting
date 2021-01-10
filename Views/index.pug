@@ -1,5 +1,37 @@
 extends layout
 
+block styles
+    include ../Public/stylesheets/index.css
+
 block mainbody
-    #mainbody
-        h4 Main Body Content
+    img(src="/Public/images/bannertest2.png" alt="Firefly Budgeting")
+    h1 Firefly Budgeting
+
+    if !loggedIn
+        #welcomeText
+            p Welcome to Firefly Budgeting, an easy-to-use budgeting tool that helps you save up for your goals!
+    else
+        p.confirm #{moneyConfirm}
+        p.confirm #{newGoalInfo}
+        #postLoginForms
+            form.panel(action="/", method="POST")
+                h2 Budget Calculator
+                .form-group
+                    label(for="money_earned") Money Earned $
+                    input(type="number", min="0", placeholder="0.00", step=".01", id="money_earned", name="money_earned")
+                .form-group
+                    label(for="money_spent") Money Spent $
+                    input(type="number", min="0", placeholder="0.00", step=".01", id="money_spent", name="money_spent")
+                button.btn.btn-primary(type="submit") Submit
+
+            form.panel(action="/addGoal", method="POST")
+                h2 Add Goal
+                .form-group
+                    label(for="goal_name") Goal Name 
+                    input(type="text", id="goal_name" placeholder="eg. Phone Case" name="goalName" required)
+                .form-group
+                    label(for="goal_cost") Goal Cost $
+                    input(type="number", min="0", placeholder="0.00", step=".01", id="goal_cost" name="goalCost" required)
+                button.btn.btn-primary(type="submit") Submit
+
+            

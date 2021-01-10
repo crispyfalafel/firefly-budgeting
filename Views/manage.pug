@@ -1,0 +1,29 @@
+extends layout
+
+block styles
+    include ../Public/stylesheets/manage.css
+
+block mainbody
+    img(src="/Public/images/FireflyLogo.png" alt="Firefly Budgeting Logo")
+    h1 Manage Goals
+    
+
+    if hasGoals
+        p You've saved $#{wallet} dollars! How much of your savings would you like to put in each goal?
+        p.error #{errorMessage}
+        p.confirm #{confirmation}
+        form.panel(action="/manage", method="POST")
+            each goal, index in goals
+                .slidecontainer
+                    .goal-name
+                        h5.goal #{goal.goalName} ($#{goal.goalPrice})
+                    input(type="range", min="0", max=goal.goalPrice, value=goal.progress, step=".01", class="slider" name=goal.goalID)
+                    span #{goal.progress}
+                         
+            br
+            button(type="submit") Submit
+
+    else
+        p Add a goal #[a(href="/") here] to start tracking!
+        
+    script(src="/Public/scripts/manage.js")

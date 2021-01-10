@@ -1,0 +1,17 @@
+extends layout
+
+block styles
+    include ../Public/stylesheets/login.css
+
+block mainbody
+    #login
+        h1 Log In
+        if error
+            p.error #{error}
+
+        form(action="/login", method="POST")
+            .form-group
+                input.form-control(type="text", name="username", placeholder="Username" required)
+            .form-group
+                input.form-control(type="password", name="password", placeholder="Password" required)
+            button.btn.btn-primary(type="submit", value='submit') Login

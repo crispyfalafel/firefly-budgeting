@@ -1,0 +1,21 @@
+#login {
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    margin: 20px auto;
+}
+button {
+    margin-top: 10px;
+}
+
+.form-group {
+    padding: 5px 0;
+}
+
+@media only screen and (min-width: 768px) {
+    #login {width: 300px}
+}

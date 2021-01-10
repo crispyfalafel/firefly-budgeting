@@ -1,0 +1,31 @@
+main {
+    padding-top: 40px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+body {
+    background-color: rgb(149, 217, 149);
+}
+
+.bg-primary {
+    background-color: darkgreen !important; 
+}
+
+.form-group {
+    padding: 5px 0
+}
+
+.confirm {
+    color: green
+}
+
+.error {
+    color: darkred;
+}
+
+.panel {
+    background: white;
+    border: medium solid black;
+    border-radius: 10px;
+}
