@@ -1,0 +1,52 @@
+
+body {
+    background-color: rgb(149, 217, 149);
+    text-align: center;
+    vertical-align: middle;
+}
+h1 {
+    text-align: center;
+    font-family: 'Segoe Script', 'Segoe Print','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+label {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+    margin-right: 4px;
+  }​
+#money_spent {
+    padding-left: 100px
+}
+
+form {
+    width: 75%;
+    margin: 30px auto;
+    padding-bottom: 10px;
+}
+
+label {
+    text-align: center;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+h2 {
+    padding-top: 10px;
+}
+
+img {
+    padding-bottom: 15px;
+    width: 100%;
+}
+
+main {
+    padding-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+    img {width: 1190px;}
+    label {text-align: right;}
+}
