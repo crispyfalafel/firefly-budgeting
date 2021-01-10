@@ -17,7 +17,7 @@ html
         
     body
         nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
-            a.navbar-brand(href="/") Firefly Budgeting
+            a.navbar-brand(href="/") #[img#nav-logo(src="/Public/images/FireflyLogo.png")] Firefly Budgeting
             button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarTogglerDemo01", aria-controls="navbarTogglerDemo01", aria-expanded="false", aria-label="Toggle navigation")
                 span.navbar-toggler-icon
 
@@ -29,7 +29,7 @@ html
                         li.nav-item
                             a.nav-link(href="/manage") Manage Goals
                         li.nav-item
-                            a.nav-link(href="#") FAQ
+                            a.nav-link(href="/faq") FAQ
 
                     ul#ul-right.navbar-nav.ml-3.mt-2
                         li.nav-item
@@ -37,7 +37,7 @@ html
                 else
                     ul#ul-left.navbar-nav.me-auto.mt-2
                         li.nav-item
-                            a.nav-link(href="/") FAQ
+                            a.nav-link(href="/faq") FAQ
 
                     ul#ul-right.navbar-nav.ml-3.mt-2
                             li.nav-item

@@ -4,12 +4,23 @@ block styles
     include ../Public/stylesheets/index.css
 
 block mainbody
-    img(src="/Public/images/bannertest2.png" alt="Firefly Budgeting")
-    h1 Firefly Budgeting
+    img.banner(src="/Public/images/FireflyBanner.png" alt="Firefly Budgeting")
+
+    div
+        img.logo(src="/Public/images/FireflyLogo.png")
+        h1 Firefly Budgeting
+        img.logo(src="/Public/images/FireflyLogo.png")
 
     if !loggedIn
         #welcomeText
             p Welcome to Firefly Budgeting, an easy-to-use budgeting tool that helps you save up for your goals!
+            #list.panel
+                h2 Features
+                ul
+                    li Create a list of goals to save up for
+                    li Calculate your current budget and allocate your savings to specific goals
+                    li Visualize the total progress made toward your goals on your profile page
+                    li Track your spending and expenses to figure out your money saved
     else
         p.confirm #{moneyConfirm}
         p.confirm #{newGoalInfo}
@@ -28,10 +39,11 @@ block mainbody
                 h2 Add Goal
                 .form-group
                     label(for="goal_name") Goal Name 
-                    input(type="text", id="goal_name" placeholder="eg. Phone Case" name="goalName" required)
+                    input(type="text", id="goal_name", placeholder="eg. Phone Case", name="goalName", required, autocomplete="off")
                 .form-group
                     label(for="goal_cost") Goal Cost $
-                    input(type="number", min="0", placeholder="0.00", step=".01", id="goal_cost" name="goalCost" required)
+                    input(type="number", min="0", placeholder="0.00", step=".01", id="goal_cost" name="goalCost", required)
                 button.btn.btn-primary(type="submit") Submit
 
+            p Unsure how this all works? Visit our #[a(href="/FAQ") FAQ]
             

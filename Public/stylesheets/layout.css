@@ -25,7 +25,20 @@ body {
 }
 
 .panel {
-    background: white;
+    background: whitesmoke;
     border: medium solid black;
     border-radius: 10px;
+}
+
+#nav-logo {
+    width: 50px;
+}
+
+.navbar-brand {
+    margin-left: 10px;
+}
+
+nav li {
+    padding-bottom: 6px;
+    padding-left: 6px;
 }

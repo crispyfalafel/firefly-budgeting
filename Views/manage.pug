@@ -9,14 +9,14 @@ block mainbody
     
 
     if hasGoals
-        p You've saved $#{wallet} dollars! How much of your savings would you like to put in each goal?
+        p You have $#{wallet} saved! How much of your savings would you like to put in each goal?
         p.error #{errorMessage}
         p.confirm #{confirmation}
         form.panel(action="/manage", method="POST")
-            each goal, index in goals
+            each goal in goals
                 .slidecontainer
                     .goal-name
-                        h5.goal #{goal.goalName} ($#{goal.goalPrice})
+                        h5.goal #{goal.goalName} ($#{goal.goalPrice.toFixed(2)})
                     input(type="range", min="0", max=goal.goalPrice, value=goal.progress, step=".01", class="slider" name=goal.goalID)
                     span #{goal.progress}
                          

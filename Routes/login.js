@@ -6,7 +6,7 @@ var User = require('../Models/usersModel');
 router.get('/', function(req, res, next) {
     const loginError = req.session.loginError;
     req.session.loginError = null;
-    res.render('login', {pagetitle: 'Login', error: loginError})
+    res.render('login', {pagetitle: 'Firefly Budgeting: Login', error: loginError})
 })
 
 router.post('/', function(req, res) {

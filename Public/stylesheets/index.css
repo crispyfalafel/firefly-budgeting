@@ -6,6 +6,7 @@ body {
 }
 h1 {
     text-align: center;
+    display: inline-block;
     font-family: 'Segoe Script', 'Segoe Print','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -21,7 +22,7 @@ label {
 
 form {
     width: 75%;
-    margin: 30px auto;
+    margin: 20px auto;
     padding-bottom: 10px;
 }
 
@@ -37,7 +38,7 @@ h2 {
     padding-top: 10px;
 }
 
-img {
+.banner {
     padding-bottom: 15px;
     width: 100%;
 }
@@ -46,7 +47,28 @@ main {
     padding-top: 10px;
 }
 
+ul{
+    display: inline-block;
+    padding-left: 0;
+    text-align: left;
+    margin-top: 0%;
+    
+}
+
+#list {
+    width: 50%;
+    margin: auto;
+    padding-bottom: 10px
+    
+}
+
+.logo {
+    display: inline-block;
+    width: 5%;
+}
+
 @media only screen and (min-width: 768px) {
-    img {width: 1190px;}
+    .banner {width: 1190px;}
     label {text-align: right;}
 }
+

@@ -1,5 +1,4 @@
 body {
-    background-color: rgb(149, 217, 149);
     text-align: center;
 }
 
@@ -8,18 +7,17 @@ h1 {
     font-family: 'Segoe Script', 'Segoe Print';
 }
 
-div {
-    border: medium solid black;
-    border-radius: 25px;
-    width: 75%;
-    background: white;
+main div {
+    width: 60%;
     margin: auto;
     padding-bottom: 25px;
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 15px;
+    margin-bottom: 30px;
 }
 
-img {
-    margin-top: 25px;
-    
+main img {
+    margin-top: 25px; 
+    width: 15%; 
 }

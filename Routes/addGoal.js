@@ -4,12 +4,12 @@ var Goal = require('../Models/goalsModel');
 
 router.post('/', function(req, res) {
     let goalName = req.body.goalName;
-    let goalPrice = Number(req.body.goalCost);
+    let goalPrice = Number(req.body.goalCost).toFixed(2);
     let username = req.session.username;
     let goalArray = goalName.split(" ");
     let goalID = goalArray.join("-");
 
-    let newGoal = new Goal({username: username, goalName: goalName, goalID: goalID, goalPrice: goalPrice, progress: 0});
+    let newGoal = new Goal({username: username, goalName: goalName, goalID: goalID, goalPrice: goalPrice, progress: 0, progressMilestone: 0});
     console.log(newGoal);
     newGoal.save((err) => {
         if (err) {console.log(err);}

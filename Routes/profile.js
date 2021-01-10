@@ -11,20 +11,21 @@ router.get('/', function(req, res) {
                 if (err) {console.log(err);}
                 else {
                     let moneyValues = {
-                        moneyEarned: record[0].moneyEarned,
-                        moneySpent: record[0].moneySpent,
-                        moneySaved: record[0].moneyEarned - record[0].moneySpent
+                        moneyEarned: record[0].moneyEarned.toFixed(2),
+                        moneySpent: record[0].moneySpent.toFixed(2),
+                        moneySaved: (record[0].moneyEarned - record[0].moneySpent).toFixed(2)
                     }
-                    const errorMessage = req.session.errorMessage;
-                    req.session.errorMessage = null;
-                    const confirmation = req.session.confirmation;
-                    req.session.confirmation = null;
+                    const removedMessage = req.session.removedMessage;
+                    req.session.removedMessage = null;
+                    const purchasedMessage = req.session.purchasedMessage;
+                    req.session.purchasedMessage = null;
 
-                    res.render('profile', {pagetitle: "Profile",
+                    res.render('profile', {pagetitle: "Firefly Budgeting: Profile",
                                           loggedIn: true,
                                           moneyValues: moneyValues,
                                           goals: goals,
-                                          hasGoals: goals.length > 0
+                                          removedMessage: removedMessage,
+                                          purchasedMessage: purchasedMessage
                                           })
                 }
             })
@@ -33,12 +34,5 @@ router.get('/', function(req, res) {
         }
     })    
 })
-
-router.post('/', function(req, res) {
-
-})
-
-
-
 
 module.exports = router;

@@ -11,6 +11,9 @@ const logoutRouter = require('./Routes/logout');
 const addGoalRouter = require('./Routes/addGoal');
 const manageRouter = require('./Routes/manage');
 const profileRouter = require('./Routes/profile');
+const removeRouter = require('./Routes/remove');
+const purchasedRouter = require('./Routes/purchased');
+const faqRouter = require('./Routes/faq');
 
 // Initialize app
 const app = express();
@@ -42,7 +45,9 @@ app.use('/logout', logoutRouter);
 app.use('/addgoal', addGoalRouter);
 app.use('/manage', manageRouter)
 app.use('/profile', profileRouter);
-
+app.use('/remove', removeRouter);
+app.use('/purchase', purchasedRouter);
+app.use('/faq', faqRouter);
 
 
 app.listen(port, () => {

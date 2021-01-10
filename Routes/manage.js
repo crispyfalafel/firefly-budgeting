@@ -20,7 +20,7 @@ router.get('/', function(req, res) {
                     const confirmation = req.session.confirmation;
                     req.session.confirmation = null;
 
-                    res.render('manage', {pagetitle: "Manage Goals",
+                    res.render('manage', {pagetitle: "Firefly Budgeting: Goals",
                                           loggedIn: true,
                                           wallet: (record[0].moneyEarned - record[0].moneySpent - moneyAllocated).toFixed(2),
                                           goals: goals,
@@ -57,7 +57,15 @@ router.post('/', function(req, res) {
                     if (err) {console.log(err)}
                     else {
                         for (goal of goals) {
-                            goal.progress = req.body[goal.goalID]
+                            goal.progress = Number(req.body[goal.goalID]);
+                            let progress = Number(goal.progress);
+                            let total = Number(goal.goalPrice);
+
+                            let milestone = Math.ceil((progress * 100/total) / 5) * 5
+
+                            goal.progressMilestone = milestone;
+
+
                             goal.save((err) => {
                                 if (err) {console.log(err)}
                             })
@@ -76,8 +84,5 @@ router.post('/', function(req, res) {
     })
     
 })
-
-
-
 
 module.exports = router;

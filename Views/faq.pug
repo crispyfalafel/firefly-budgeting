@@ -1,0 +1,29 @@
+extends layout
+
+block styles
+    include ../Public/stylesheets/faq.css
+
+block mainbody
+    h1 FAQ
+    .panel
+        h2 Who are we?
+        p We are a three-woman team of university students who are passionate about promoting equal access to resources such as financial literacy tools to members of all ages, genders, classes and abilities. This site is the culmination of our efforts to create such a project at the 2021 SheHacks Hackathon event. 
+            | Our team is comprised of our lead technical expert and Computer Science student Jolin Lin, and our marketing and design team members Diana ("Dee") Voloshin, a Finance and Business student, and Claire Gibson, a Law student.
+        
+        h2 What does Firefly Budgeting do?
+        p Firefly Budgeting is a budgeting tool that assists youths in learning how to allocate money so that they could save money towards their goals. 
+            | Firefly Budgeting also provides a tracker of how much money has been spent and saved. You can then choose what portion of the saved amount can be allocated towards your goal.
+
+        h2 What kind of goals would you recommend adding?
+        p Anything! We recommend you strive for something that you really want or need. It can be something as expensive as a computer or as cheap as a pencil. If you can't decide which goal to follow, then follow multiple goals! 
+
+        h2 How does the site work?
+        p You can add items that you want to save up for by entering their name and price on our Firefly Budgeting homepage after you log in. These will be added as "goals", and we will track your progress saving toward these goals. 
+            | On our homepage you can also enter how much you earn and spend whenever you earn or spend it, and we track these amounts to calculate the total amount you have saved. On the manage goals page, you can choose how much of the 
+            | money you have saved you would like to put toward each of the goals you are saving for. The progress you have made toward each goal as well as the total money you have earned, spent, 
+            | and saved is displayed on your profile. If you want to change the amount of money you have put toward each goal, you can hit the "reset" button beside the progress bar on your profile page, or change the amount allocated to that goal 
+            | back to zero on the "manage goals" page.
+        br
+        p Have more questions? Contact us at #[a(href="mailto:FireflyBudgeting@gmail.com" subject="subject text" id="lost") FireflyBudgeting@gmail.com].
+
+        img(src="/Public/images/FireflyLogo.png", alt="Firefly Budgeting Logo")

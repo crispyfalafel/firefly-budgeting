@@ -7,7 +7,8 @@ let goalSchema = new Scheme( {
     goalName : String,
     goalID: String,
     goalPrice : Number,
-    progress : Number
+    progress : Number,
+    progressMilestone : Number
 })
 
 module.exports = mongooose.model('Goals', goalSchema);

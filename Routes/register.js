@@ -6,7 +6,7 @@ let User = require('../Models/usersModel');
 router.get('/', function(req, res, next) {
     const registerError = req.session.registerError;
     req.session.registerError = null;
-    res.render('register', {pagetitle: 'Register', error: registerError})
+    res.render('register', {pagetitle: 'Firefly Budgeting: Register', error: registerError})
     
 })
 
