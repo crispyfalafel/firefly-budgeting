@@ -9,7 +9,8 @@ const loginRouter = require('./Routes/login');
 const registerRouter = require('./Routes/register');
 const logoutRouter = require('./Routes/logout');
 const addGoalRouter = require('./Routes/addGoal');
-const manage = require('./Routes/manage');
+const manageRouter = require('./Routes/manage');
+const profileRouter = require('./Routes/profile');
 
 // Initialize app
 const app = express();
@@ -39,9 +40,8 @@ app.use('/login', loginRouter);
 app.use('/register', registerRouter);
 app.use('/logout', logoutRouter);
 app.use('/addgoal', addGoalRouter);
-app.use('/manage', manage)
-
-// Logout
+app.use('/manage', manageRouter)
+app.use('/profile', profileRouter);
 
 
 

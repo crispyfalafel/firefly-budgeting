@@ -1,0 +1,26 @@
+extends layout
+
+block styles
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css")
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js")
+    include ../Public/stylesheets/profile.css
+
+block mainbody
+    img#id(src="/Public/images/Profile.png", alt="Firefly Logo")
+    h1 profile 
+    .container.panel
+        h3 Total Money Earned: $
+        h3 Total Money Spent: $
+        h3 Total Money Saved: $
+    
+    .container.panel
+        h2 Goal Progress
+        .goal-name
+            h5 Pizza
+        
+        .progress(style="height: 35px;")
+            .progress-bar(role="progressbar" style="width: 25%;", aria-valuenow="25", aria-valuemin="0", aria-valuemax="100") 25%
+        //- .progress
+        //-     .progress-bar.progress-bar-info(role="progressbar",  aria-valuenow="50", aria-valuemin="0", aria-valuemax="100", style="width:50%") 50% - Almost complete!
+        button.btn.btn-primary Reset
