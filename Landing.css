@@ -8,6 +8,7 @@ body {
 h1 {
     text-align: center;
     font-family: 'Segoe Script', 'Segoe Print','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline-block;
 }
 
 label {
@@ -25,6 +26,10 @@ form {
     background: white;
     margin: auto;
     padding-bottom: 10px
+}
+
+#logo {
+    display: inline-block;
 }
 
 
