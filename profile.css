@@ -26,27 +26,29 @@ div {
 
 .container {
     border: medium solid black !important;
+    border-radius: 25px;
     width: 75%;
     background: white;
     margin: auto;
     text-align: center;
 }
 
-#goals {
+.goals {
     font-size:25px;
     font-family: 'segoe script';
 }
 
 #goalname {
     display: inline-block;
-    
 }
 
 #myBtn {
     display: inline-block;
-    
 }
 
+#total {
+    border-radius: 25px;
+}
 
 
  /* The Modal (background) */
@@ -94,6 +96,8 @@ div {
     margin: -1%;
     margin-left: 5px;
     margin-right: 5px;
+    border: medium solid black;
+    border-radius: 0px;
     
   }   
 
